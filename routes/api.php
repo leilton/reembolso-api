@@ -13,6 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::group(['prefix' => 'refunds'], function(){
+    Route::post('', 'api\RefundsController@store');
+    Route::put('{id}', 'api\RefundsController@update');
+    Route::delete('{id}', 'api\RefundsController@destroy');
+    Route::put('{id}/restore', 'api\RefundsController@restore');
+    Route::get('report', 'api\RefundsController@report');
+    Route::get('', 'api\RefundsController@index');
 });
