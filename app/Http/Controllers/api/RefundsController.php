@@ -25,9 +25,47 @@ class RefundsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    public function fileupload(Request $request, $id)
+    {
+        $refund = Refund::find($id);
+        if (is_null($refund)) {
+            return response()->json([
+                'erro' => 'Refound not found'
+            ], 404);
+        }
+
+        if($files = $request->file('receipt')){
+            $prefix = explode('.', $files->getClientOriginalName());
+            $prefix = end($prefix);
+
+            $name = "refound-$id.$prefix";
+            $files->move('image',$name);
+            $refund->receipt = $name;
+            $refund->save();
+
+            return response()
+                ->json(
+                    $refund,
+                    200
+            );
+
+        }
+
+        return response()->json([
+            'erro' => 'Image not found'
+        ], 404);
+
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request)
     {
-        $usuario = $this->getUser();
+        $usuario = $this->getUser($request->identification);
 
         $result = [];
         foreach($request->refunds as $refund){
@@ -51,7 +89,7 @@ class RefundsController extends Controller
     }
 
     function getUser($id){
-        $usuario = User::findOrFail($id);
+        $usuario = User::find($id);
 
         if(is_null($usuario)){
             return response()->json([

@@ -19,6 +19,7 @@ Route::post('register', 'api\UserController@register');
 Route::group(['middleware' => 'auth:api'], function(){
     Route::group(['prefix' => 'refunds'], function(){
         Route::post('', 'api\RefundsController@store');
+        Route::post('{id}/upload', 'api\RefundsController@fileupload');
         Route::put('{id}', 'api\RefundsController@update');
         Route::put('{id}/status', 'api\RefundsController@status');
         Route::put('{id}/block', 'api\RefundsController@block');
