@@ -148,4 +148,46 @@ class RefundsController extends Controller
 
         return number_format($totalRefunds,'2','.','');
    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function status(Request $request, $id)
+    {
+        $refund = Refund::find($id);
+        if (is_null($refund)) {
+            return response()->json([
+                'erro' => 'Refound not found'
+            ], 404);
+        }
+        $refund->status = $request->status ? false : true;
+        $refund->save();
+
+        return $refund;
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function block(Request $request, $id)
+    {
+        $refund = Refund::find($id);
+        if (is_null($refund)) {
+            return response()->json([
+                'erro' => 'Refound not found'
+            ], 404);
+        }
+        $refund->block = $request->block ? false : true;
+        $refund->save();
+
+        return $refund;
+    }
 }
