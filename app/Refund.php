@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Refound extends Model
+class Refund extends Model
 {
     public $timestamps = false;
     protected $fillable = ['date', 'type', 'description', 'value', 'receipt'];
