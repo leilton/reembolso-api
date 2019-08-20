@@ -116,4 +116,36 @@ class RefundsController extends Controller
         }
         return $refund;
     }
+
+    public function report (Request $request)
+    {
+        $month = $request->month;
+        $year = $request->year;
+
+        $refunds = Refund::whereYear('date', $year)
+            ->whereMonth('date', $month)
+            ->get();
+
+        $totalRefunds = $this->totalRefunds($refunds);
+
+        $report = [
+            'month' => $month,
+            'year' => $year,
+            'totalRefunds' => $totalRefunds,
+            'refunds' => count($refunds)
+        ];
+
+        return $report;
+    }
+
+   function totalRefunds ($refunds)
+   {
+        $totalRefunds = 0;
+        foreach ($refunds as $refund)
+        {
+            $totalRefunds += $refund->value;
+        }
+
+        return number_format($totalRefunds,'2','.','');
+   }
 }
