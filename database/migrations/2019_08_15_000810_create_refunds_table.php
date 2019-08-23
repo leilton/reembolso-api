@@ -22,6 +22,9 @@ class CreateRefundsTable extends Migration
             $table->string('receipt', 20)->nullable($value = true);
             $table->tinyInteger('status')->default(0);
             $table->tinyInteger('block')->default(0);
+            $table->unsignedBigInteger('user_id');
+
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
