@@ -6,6 +6,9 @@ use App\Refund;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Validator;
+use App\Http\Requests\RefundsRequest;
 
 class RefundsController extends Controller
 {
@@ -29,9 +32,7 @@ class RefundsController extends Controller
     {
         $refund = Refund::find($id);
         if (is_null($refund)) {
-            return response()->json([
-                'erro' => 'Refound not found'
-            ], 404);
+            return response()->json([ 'erro' => 'Refound not found' ], 404);
         }
 
         if($files = $request->file('receipt')){
@@ -43,17 +44,11 @@ class RefundsController extends Controller
             $refund->receipt = $name;
             $refund->save();
 
-            return response()
-                ->json(
-                    $refund,
-                    200
-            );
+            return response()->json( $refund, 200 );
 
         }
 
-        return response()->json([
-            'erro' => 'Image not found'
-        ], 404);
+        return response()->json([ 'erro' => 'Image not found' ], 404);
 
     }
 
@@ -65,38 +60,34 @@ class RefundsController extends Controller
      */
     public function store(Request $request)
     {
-        $usuario = $this->getUser($request->identification);
-
         $result = [];
         foreach($request->refunds as $refund){
-            $refund['date'] = date('Y-m-d H:i:s', strtotime($refund['date']));
-            $result[] = Refund::create($refund);
+            if(!empty($refund)){
+                $refund['date'] = date('Y-m-d H:i:s', strtotime($refund['date']));
+                $refund['user_id'] = Auth::id();
+                $result[] = $this->saveRefund($refund);
+            }
         }
 
-        $result = [
-            'name' => $request->name,
-            'identification' => $request->identification,
-            'jobRole' => $request->jobRole,
-            'refunds' => $result,
-            'createdAt' => $usuario->created_at
-        ];
+        if(empty($result)){
+            return response()->json(['erro' => 'Not refounds'], 422);
+        }
 
-        return response()
-            ->json(
-                Refund::create($result),
-                201
-        );
+        return response()->json(['result' => $result], 201);
     }
 
-    function getUser($id){
-        $usuario = User::find($id);
+    public function saveRefund($refund){
+        $validator = Validator::make($refund, [
+            'description' => 'required',
+            'type' => 'required',
+            'value' => 'required|numeric',
+        ]);
 
-        if(is_null($usuario)){
-            return response()->json([
-                'erro' => 'User not found'
-            ], 404);
+        if($validator->fails()){
+            return response()->json(['Messages'=> $validator->errors(), 'refund' => $refund], 401);
         }
-        return $usuario;
+
+        return Refund::create($refund);
     }
 
     /**
@@ -117,7 +108,7 @@ class RefundsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(RefundsRequest $request, $id)
     {
         $refund = Refund::find($id);
         if (is_null($refund)) {
@@ -141,6 +132,8 @@ class RefundsController extends Controller
     {
         $refund = Refund::findOrFail($id);
         $refund->delete();
+
+        return response()->json( ['message' => 'Refund remove success' ], 200); 
     }
 
     public function restore($id)
@@ -148,11 +141,9 @@ class RefundsController extends Controller
         $refund = Refund::onlyTrashed()->find($id);
         if (!is_null($refund)) {
             $refund->restore();
-            return response()->json([
-                'erro' => $refund
-            ], 200);
+            return response()->json($refund, 200);
         }
-        return $refund;
+        return response()->json(['message' => 'refund already restored'], 200);
     }
 
     public function report (Request $request)
@@ -160,32 +151,23 @@ class RefundsController extends Controller
         $month = $request->month;
         $year = $request->year;
 
+        if(!$month || !$year){
+            return response()->json(['error' => 'inputs incorrects'], 400);
+        }
+
         $refunds = Refund::whereYear('date', $year)
             ->whereMonth('date', $month)
             ->get();
 
-        $totalRefunds = $this->totalRefunds($refunds);
-
         $report = [
             'month' => $month,
             'year' => $year,
-            'totalRefunds' => $totalRefunds,
+            'totalRefunds' => number_format($refunds->sum('value'),'2','.',''),
             'refunds' => count($refunds)
         ];
 
-        return $report;
+        return response()->json($report, 200);
     }
-
-   function totalRefunds ($refunds)
-   {
-        $totalRefunds = 0;
-        foreach ($refunds as $refund)
-        {
-            $totalRefunds += $refund->value;
-        }
-
-        return number_format($totalRefunds,'2','.','');
-   }
 
     /**
      * Update the specified resource in storage.
