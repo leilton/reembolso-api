@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Refund extends Model
 {
     public $timestamps = false;
-    protected $fillable = ['date', 'type', 'description', 'value', 'receipt'];
+    protected $fillable = ['date', 'type', 'description', 'value', 'receipt', 'user_id'];
 
     public function getStatusAttribute($status): bool
     {
@@ -28,6 +28,5 @@ class Refund extends Model
     use softDeletes;
 
     protected $dates = ['deleted_at'];
-    protected $dateFormat = 'c';
 
 }
