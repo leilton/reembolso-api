@@ -3,7 +3,7 @@
 		"_postman_id": "4b7927ca-ae47-4416-8828-796e8c45dd1b",
 		"name": "Reembolso-API",
 		"description": "Rotas de uso para o reembolso-API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -36,17 +36,7 @@
 						}
 					]
 				},
-				"url": {
-					"raw": "localhost:8000/api/register",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"register"
-					]
-				},
+				"url": "localhost:8000/api/register",
 				"description": "Criar um usuario para poder autenticar"
 			},
 			"response": []
@@ -76,17 +66,7 @@
 						}
 					]
 				},
-				"url": {
-					"raw": "localhost:8000/api/login",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"login"
-					]
-				},
+				"url": "localhost:8000/api/login",
 				"description": "Logar em usuario ja cadastrado"
 			},
 			"response": []
@@ -96,13 +76,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI"
+					}
 				},
 				"method": "GET",
 				"header": [],
@@ -110,17 +86,7 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds"
-					]
-				},
+				"url": "localhost:8000/api/refunds",
 				"description": "Lista todos os reembolsos ja paginados"
 			},
 			"response": []
@@ -130,13 +96,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4"
+					}
 				},
 				"method": "POST",
 				"header": [
@@ -151,17 +113,7 @@
 					"mode": "raw",
 					"raw": "{\n  \"name\": \"Leilton Cesar\",\n  \"identification\": 1,\n  \"jobRole\": \"Não sei\",\n  \"refunds\": [\n    {\n      \"date\": \"2019-08-12T09:33:20-03:00\",\n      \"type\": \"TICKET\",\n      \"description\": \"Gastei com a passagem para Porto Alegre\",\n      \"value\": 108.90\n    },\n    {\n      \"date\": \"2019-08-12T09:33:20-03:00\",\n      \"type\": \"OTHER\",\n      \"description\": \"Gastei com a passagem para Porto Alegre\",\n      \"value\": 1108.90\n    }\n  ]\n}"
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds"
-					]
-				},
+				"url": "localhost:8000/api/refunds",
 				"description": "cria um reebolso"
 			},
 			"response": []
@@ -171,13 +123,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI"
+					}
 				},
 				"method": "PUT",
 				"header": [
@@ -192,18 +140,7 @@
 					"mode": "raw",
 					"raw": "{\n\t\"value\": 150.77\n}"
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/10",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"10"
-					]
-				},
+				"url": "localhost:8000/api/refunds/10",
 				"description": "Atualiza um reembolso (valor)"
 			},
 			"response": []
@@ -213,13 +150,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4"
+					}
 				},
 				"method": "PUT",
 				"header": [
@@ -234,19 +167,7 @@
 					"mode": "raw",
 					"raw": "{\n\t\"description\": \"Gastei com a passagem para Rio de Janeiro\",\n\t\"value\": 118.90\n}"
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/10/restore",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"10",
-						"restore"
-					]
-				},
+				"url": "localhost:8000/api/refunds/10/restore",
 				"description": "restaura um reembolso excluido (softdelete)"
 			},
 			"response": []
@@ -259,13 +180,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4"
+					}
 				},
 				"method": "GET",
 				"header": [
@@ -280,18 +197,7 @@
 					"mode": "raw",
 					"raw": "{\n\t\"month\": 8,\n\t\"year\": 2019\n}"
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/report",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"report"
-					]
-				},
+				"url": "localhost:8000/api/refunds/report",
 				"description": "exporta um relatorio (json)"
 			},
 			"response": []
@@ -301,13 +207,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjRmNjgwM2M2NjBmNzE2MGY1NjcyYzRkMWEyMThjMGRiNTcxMzc1NWQ0NDYyYTU4NWI4ZGEyMGQ3Mjk4MTVhY2MyYWE4Yjc3Mjg0ZWRmZDI2In0.eyJhdWQiOiIxIiwianRpIjoiNGY2ODAzYzY2MGY3MTYwZjU2NzJjNGQxYTIxOGMwZGI1NzEzNzU1ZDQ0NjJhNTg1YjhkYTIwZDcyOTgxNWFjYzJhYThiNzcyODRlZGZkMjYiLCJpYXQiOjE1NjYyNTMxODIsIm5iZiI6MTU2NjI1MzE4MiwiZXhwIjoxNTk3ODc1NTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.K9Aoidndz2pwDu_m56g5iiQyVEWEI_7f2Tuu2IlVl9mY-GFAHuuOMAdH_GJJFF8DjyLcF25wVlD3ekMJkivsffLEzt7ju967qycYNjnyCJGRvK2XIh4EodnYHnIokMUJCGNnD_TcCu3UCpiNlh50y9CR2ewo27kLnFPBkyV-BD3Tyh0JGGUoRz-EBtTl_Z__H__ZGMSqK9wMQaZXFfdxvQUd-cjew-Pd_0T7_uwnR1B-K4OI_UFp55XaWknj0yqSwl1IzhoRc9HqwH1EV_ttHogcZAZnmQOjADWXbVAybOnI4BlZ5N9W69BOnK6cy4HrbG_qBnwyHORkkpW7VDV1FQg-4pSp6VQZwDSq-vtJog6exaNeZUb6H4j9hJxPghJA5qP_vvSyVueF6X2sOSJYc4FphFoYwkwPIm6m3zV9CrvxgNjPxB0HvJRAbmeeOKjVCGW12u4TppQrDhLsZBHrAARielA_xw-0u82Av29d3y853_5oTtYvy3vVS_EiqdQY-5mvAL8EB2BsIzy-0Mm3i_v3RFSX4S4k9H5Xyw7U1bFaAZY3mVVMQB38QBst3udU7tmyC3DRgXGO3j507a6DgnzgJNY4INQ8CKE_gpJ3IsCQl0g5Qw-dHnOeZ545eheWGQr8Ye95_WSFWKpgJwnpTkD9CkijHT4LiiIFh6t03C4"
+					}
 				},
 				"method": "DELETE",
 				"header": [
@@ -322,34 +224,19 @@
 					"mode": "raw",
 					"raw": "{\n\t\"description\": \"Gastei com a passagem para Rio de Janeiro\",\n\t\"value\": 118.90\n}"
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/10",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"10"
-					]
-				},
+				"url": "localhost:8000/api/refunds/10",
 				"description": "deleta um reembolso (sofdelete)"
 			},
 			"response": []
 		},
 		{
-			"name": "localhost:8000/api/refunds/10/status",
+			"name": "localhost:8000/api/refunds/7/approve",
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImI5MjM1OGI4OWFmZDQxNWRiNmE1MDNkZjE2ODNkM2UxMmE1MDhmZWQ2MGIwMzUyNDc0ODFiZmRmODE5MTFjZDgwNjVlM2Y0ODVmNTk0MjliIn0.eyJhdWQiOiIxIiwianRpIjoiYjkyMzU4Yjg5YWZkNDE1ZGI2YTUwM2RmMTY4M2QzZTEyYTUwOGZlZDYwYjAzNTI0NzQ4MWJmZGY4MTkxMWNkODA2NWUzZjQ4NWY1OTQyOWIiLCJpYXQiOjE1NjY1OTgyODcsIm5iZiI6MTU2NjU5ODI4NywiZXhwIjoxNTk4MjIwNjg3LCJzdWIiOiIyIiwic2NvcGVzIjpbXX0.zGHJJxZ1C2Ty1fbrremZPsO43oJh1E3g0b2Sz9aLQQ3i4WNyJfv8tQEr3gAT3C2dExm3J3OINqCOwR_seoAAlGOCXZhNEd-giGHc7FfWIHMKhWZZJuHAvVwu_AzK1aAJa4WBHyikUU4NfBMbmcAeBFPGC2nW2cLwU82uJHZqFJH2zwSDaSE74Io0LNUxQ5pW4aHk8_gHeM7EPoyjerjAvR2V6HEjrjXA6_7ERZn2E8mE34m0sJlZ4V-MwhBu4XjW6UAvbQq7_uTp0mqeiZiSwYrXrMADqfuUKbGEym-grj2L-FDJnMy2qe3pItOI6Yp7bpgJF_Q7qNfmYyzlCadCnu0miFvwxBcPOxDfTJOW3zIVyF48cwr2RjaCwNo55Ohsk6wnh7CuOhUhfYbco6ZUpaqAi5FEScILfbHtbNl6kFjejog2Rwc78VeJIbvq1Z22CcdV1bKmyjYArCWYY7qONZFmOi4RlxtZFuch75SesrcWYHq1GTeitJj4Ro3Z-hfe2zNGOs4gn5F35hfICOq8lCX2TcBChSFdcwc9MLOwV0uJCP83zCdOGiLr6MvlwQc6w4bnpv_4g9sFex0-YMOm6OOvjqcApZk3BLsokj_bEANh8JhJUfDtGFdvYxFz31NMS_p_2QIxW7kkW1xYrwWsJHoyH6aWan9Zk09oo6Vl5IY"
+					}
 				},
 				"method": "PUT",
 				"header": [
@@ -364,20 +251,8 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/10/status",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"10",
-						"status"
-					]
-				},
-				"description": "aprova e reprova um reembolso"
+				"url": "localhost:8000/api/refunds/7/approve",
+				"description": "aprova um reembolso"
 			},
 			"response": []
 		},
@@ -386,13 +261,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjUwYzI1OTQxOTM0NWI1ZDY5MDYyMmE0ODI0ODFkNTgyNzNhNWQ5M2EyZWM3Y2E0ODk1ZjE1NjVmMTJmYjUzNGIwNTJmNGNmNDJkZDQwMGQxIn0.eyJhdWQiOiIxIiwianRpIjoiNTBjMjU5NDE5MzQ1YjVkNjkwNjIyYTQ4MjQ4MWQ1ODI3M2E1ZDkzYTJlYzdjYTQ4OTVmMTU2NWYxMmZiNTM0YjA1MmY0Y2Y0MmRkNDAwZDEiLCJpYXQiOjE1NjYzMzYxNzcsIm5iZiI6MTU2NjMzNjE3NywiZXhwIjoxNTk3OTU4NTc3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.YRrCFBtPhyYxp1eay07aRBkTp7hlk9LxhD7apvF9pRbW3xg7rM-LhrxXKd1lqUQOGmVNDR_Ljz7m4R9rH86yp13HLYs63Yo-jm7Ym2KgE651fS6sPKItL4CNu5_UbeZu1Cw1jk3CjLId-IGSM5VTQ3gMqNf7ORixa3ZzES5WZfzjloKMOvVXiBVkrJiFiWjMuEO5WVZal85kjUOGodLt45UW3zP_-NMOcW0kqZvSgTZ9CvxU0zhTQrZdYR7hEeTbuL3cpK-rxdhtvvidrAlHDUmQHZ1QXZCQkGlsvDNZu9Bl7HWfsaS-JR24naO_8InydcYiYjJCEAx2d61eDu-eK9u_WhgbeC9Wa0pUF4hyi-nbLWkauku6lhi_bOaXHq9MBGVADhj-mkSFWJOnQigYYK-MuqrxH69H4Q0_e7d_7zNAI7J0-zquKMHFHJc-SNstnoly5O1HAzLwKSGx4eT8ohlvCskUUsLuAWMyOYRFYer2l5v9Y1L1HrpMb-skmccPeJTpLYETRhgyoJSjoJwQV-epJK_Dmft9Ge9PbYFbW0MxQlhQ2w9ClfdubXon-HJW-5oY4lX7DKhViCRpbzoksgE3kZ2bHdAF9-Y3pFloR0Ydv24byZzTQuR_rIKBbLw94_h5Tv4AGz_ECqBfBzWwaSYS0PncXyIqB8um5HdcwjI"
+					}
 				},
 				"method": "PUT",
 				"header": [
@@ -407,19 +278,7 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/7/block",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"7",
-						"block"
-					]
-				},
+				"url": "localhost:8000/api/refunds/7/block",
 				"description": "bloquear e desbloquear um reembolso"
 			},
 			"response": []
@@ -429,13 +288,9 @@
 			"request": {
 				"auth": {
 					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjczODBjMDg0MjQxMzBkNDdiMTc5ZjhiZTkwYjNiODE2YWYxY2YwM2ZkNjNjNDJiODgyODNlNWIzNzIzYjM5ZWYxNzhiNjNlNzk3YTE3NTU2In0.eyJhdWQiOiIxIiwianRpIjoiNzM4MGMwODQyNDEzMGQ0N2IxNzlmOGJlOTBiM2I4MTZhZjFjZjAzZmQ2M2M0MmI4ODI4M2U1YjM3MjNiMzllZjE3OGI2M2U3OTdhMTc1NTYiLCJpYXQiOjE1NjYzNDAxODIsIm5iZiI6MTU2NjM0MDE4MiwiZXhwIjoxNTk3OTYyNTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.1TfXG2gO3j0bGzqLVx90-U2PhQQTXljuj6KCVNe6y9P7XpOqx6YMMpk6pWDpR70ZyqCCDeomy3yuwHp_GhXUORpDNt_ffQFcEKOYXCmBul2YVQKMXsYpKCCDNLAR3eyW0o4ZEecNt0KmWuGdHCFoAk0oDaGNzXCRp_jKg_feUH4Ccnw53gOZT9OTU3p6FExdy3wdAesWRbegLhBoaVWjfPRJRmk4euI7B_rOQNFQXO3GwqAMeGSw9bSRY6Q8nPauUIeDPw_UVbTzyLT1qNmy8t3xkxWWLnQKLcQrZRW4z_ohQMWueEA3p95A456ZRCC_pntSNb90_PEc2eSU8HacUeI_3bkTXOfEQG_v7D07XS8eoeP_qXo1KIBkS3jAHxLpIHN7BGNArE9p1BkPDyteFHAwO0H3IkvZkOXj7R7tYfl1Jy4qsmHgH-pDQmN_tQLInBByVP9McTuuozaiZerQ7-pIPbKIBBf3U07up-Wqqi-t8VLZ3HlUjS7Ue-blxSCfOj9p306YG4QLRLaEWix2F1jd5wEiIP5kwK0hA-wZ75iSopiAf1CygqcVnCFuSdDLThgRaF52uxEzrIrgOhw7wKZvyjCIuES_tmjgf12iHuBOMbq9wDUUkWOZ8CdC09ETypuUzBP4vXJHIjDxVKuHwaVTPeqdF_3a5O9QBH8x5T0",
-							"type": "string"
-						}
-					]
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjczODBjMDg0MjQxMzBkNDdiMTc5ZjhiZTkwYjNiODE2YWYxY2YwM2ZkNjNjNDJiODgyODNlNWIzNzIzYjM5ZWYxNzhiNjNlNzk3YTE3NTU2In0.eyJhdWQiOiIxIiwianRpIjoiNzM4MGMwODQyNDEzMGQ0N2IxNzlmOGJlOTBiM2I4MTZhZjFjZjAzZmQ2M2M0MmI4ODI4M2U1YjM3MjNiMzllZjE3OGI2M2U3OTdhMTc1NTYiLCJpYXQiOjE1NjYzNDAxODIsIm5iZiI6MTU2NjM0MDE4MiwiZXhwIjoxNTk3OTYyNTgyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.1TfXG2gO3j0bGzqLVx90-U2PhQQTXljuj6KCVNe6y9P7XpOqx6YMMpk6pWDpR70ZyqCCDeomy3yuwHp_GhXUORpDNt_ffQFcEKOYXCmBul2YVQKMXsYpKCCDNLAR3eyW0o4ZEecNt0KmWuGdHCFoAk0oDaGNzXCRp_jKg_feUH4Ccnw53gOZT9OTU3p6FExdy3wdAesWRbegLhBoaVWjfPRJRmk4euI7B_rOQNFQXO3GwqAMeGSw9bSRY6Q8nPauUIeDPw_UVbTzyLT1qNmy8t3xkxWWLnQKLcQrZRW4z_ohQMWueEA3p95A456ZRCC_pntSNb90_PEc2eSU8HacUeI_3bkTXOfEQG_v7D07XS8eoeP_qXo1KIBkS3jAHxLpIHN7BGNArE9p1BkPDyteFHAwO0H3IkvZkOXj7R7tYfl1Jy4qsmHgH-pDQmN_tQLInBByVP9McTuuozaiZerQ7-pIPbKIBBf3U07up-Wqqi-t8VLZ3HlUjS7Ue-blxSCfOj9p306YG4QLRLaEWix2F1jd5wEiIP5kwK0hA-wZ75iSopiAf1CygqcVnCFuSdDLThgRaF52uxEzrIrgOhw7wKZvyjCIuES_tmjgf12iHuBOMbq9wDUUkWOZ8CdC09ETypuUzBP4vXJHIjDxVKuHwaVTPeqdF_3a5O9QBH8x5T0"
+					}
 				},
 				"method": "POST",
 				"header": [
@@ -456,19 +311,7 @@
 						}
 					]
 				},
-				"url": {
-					"raw": "localhost:8000/api/refunds/7/upload",
-					"host": [
-						"localhost"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"refunds",
-						"7",
-						"upload"
-					]
-				},
+				"url": "localhost:8000/api/refunds/7/upload",
 				"description": "Adicionar imagem ao reembolso"
 			},
 			"response": []
