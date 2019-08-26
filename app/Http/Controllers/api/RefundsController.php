@@ -30,10 +30,7 @@ class RefundsController extends Controller
      */
     public function fileupload(Request $request, $id)
     {
-        $refund = Refund::find($id);
-        if (is_null($refund)) {
-            return response()->json([ 'erro' => 'Refound not found' ], 404);
-        }
+        $refund = Refund::findOrFail($id);
 
         if($files = $request->file('receipt')){
             $prefix = explode('.', $files->getClientOriginalName());
@@ -45,7 +42,6 @@ class RefundsController extends Controller
             $refund->save();
 
             return response()->json( $refund, 200 );
-
         }
 
         return response()->json([ 'erro' => 'Image not found' ], 404);
@@ -110,12 +106,8 @@ class RefundsController extends Controller
      */
     public function update(RefundsRequest $request, $id)
     {
-        $refund = Refund::find($id);
-        if (is_null($refund)) {
-            return response()->json([
-                'erro' => 'Refound not found'
-            ], 404);
-        }
+        $refund = Refund::findOrFail($id);
+
         $refund->value = $request->value;
         $refund->save();
 
@@ -133,17 +125,15 @@ class RefundsController extends Controller
         $refund = Refund::findOrFail($id);
         $refund->delete();
 
-        return response()->json( ['message' => 'Refund remove success' ], 200); 
+        return response()->json( ['message' => 'Refund remove success' ], 200);
     }
 
     public function restore($id)
     {
-        $refund = Refund::onlyTrashed()->find($id);
-        if (!is_null($refund)) {
-            $refund->restore();
-            return response()->json($refund, 200);
-        }
-        return response()->json(['message' => 'refund already restored'], 200);
+        $refund = Refund::onlyTrashed()->findOrFail($id);
+
+        $refund->restore();
+        return response()->json(['message' => 'refund already restored', 'Refund' => $refund], 200);
     }
 
     public function report (Request $request)
@@ -176,18 +166,13 @@ class RefundsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function status(Request $request, $id)
+    public function approve(Request $request, $id)
     {
-        $refund = Refund::find($id);
-        if (is_null($refund)) {
-            return response()->json([
-                'erro' => 'Refound not found'
-            ], 404);
-        }
+        $refund = Refund::findOrFail($id);
         $refund->status = $request->status ? false : true;
         $refund->save();
 
-        return $refund;
+        return response()->json(['Refund' => $refund], 200);
     }
 
     /**
@@ -199,15 +184,15 @@ class RefundsController extends Controller
      */
     public function block(Request $request, $id)
     {
-        $refund = Refund::find($id);
-        if (is_null($refund)) {
-            return response()->json([
-                'erro' => 'Refound not found'
-            ], 404);
+        $refund = Refund::findOrFail($id);
+
+        if(!$refund->status){
+            return response()->json(['Refund' => $refund], 204);
         }
+
         $refund->block = $request->block ? false : true;
         $refund->save();
 
-        return $refund;
+        return response()->json(['Refund' => $refund], 200);
     }
 }

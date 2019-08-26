@@ -21,7 +21,7 @@ Route::group(['middleware' => 'auth:api'], function(){
         Route::post('', 'api\RefundsController@store');
         Route::post('{id}/upload', 'api\RefundsController@fileupload');
         Route::put('{id}', 'api\RefundsController@update');
-        Route::put('{id}/status', 'api\RefundsController@status');
+        Route::put('{id}/approve', 'api\RefundsController@approve');
         Route::put('{id}/block', 'api\RefundsController@block');
         Route::delete('{id}', 'api\RefundsController@destroy');
         Route::put('{id}/restore', 'api\RefundsController@restore');
